@@ -10,3 +10,19 @@ Roxs es la líder de un equipo de trabajo para una compañía que realiza Audito
 >3. Identificar el tipo de permiso que necesita ser cambiado.
 >4. Verificar los permisos de acceso al archivo.
 
+### Solucion
+
+Dado que el proposito de Roxs es que su archivo no pueda ser accedido por nadie mas, ni un grupo especifico, ni otra persona que utilice el usuario, la solucion en este caso seria modificar los permisos para que solo Roxs pueda, ver, ejecutar y modificar el archivo.<br>
+
+Para esto, podemos modificar los permisos del archivo con el comando <i>chmod</i>, en este caso solo le daremos permisos al propietario del archivo, en otras palabras Roxs, y removeremos todos los permisos de grupos y otros.<br>
+
+El resultado serian los comandos siguientes:
+```bash
+chmod u+rwx Lista_Precios
+chmod go-rwx Lista_Precios
+```
+
+Una vez modifiquemos el archivo, podemos verificar que los permisos han sido modificados usando el siguiente comando:
+```bash
+ls -l
+```
